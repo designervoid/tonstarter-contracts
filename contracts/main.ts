@@ -1,4 +1,3 @@
-import BN from "bn.js";
 import { Cell, beginCell, Address } from "ton";
 
 // encode contract storage according to save_data() contract method
