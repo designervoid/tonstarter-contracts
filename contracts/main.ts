@@ -11,15 +11,3 @@ export function data(params: { ownerAddress: Address; counter1: number; counter2
 export function increment(): Cell {
   return beginCell().storeUint(0x37491f2f, 32).storeUint(0, 64).endCell();
 }
-
-export function deposit(): Cell {
-  return beginCell().storeUint(0x47d54391, 32).storeUint(0, 64).endCell();
-}
-
-export function withdraw(params: { withdrawAmount: BN }): Cell {
-  return beginCell().storeUint(0x41836980, 32).storeUint(0, 64).storeCoins(params.withdrawAmount).endCell();
-}
-
-export function transferOwnership(params: { newOwnerAddress: Address }): Cell {
-  return beginCell().storeUint(0x2da38aaf, 32).storeUint(0, 64).storeAddress(params.newOwnerAddress).endCell();
-}
