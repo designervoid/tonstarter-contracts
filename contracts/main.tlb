@@ -3,14 +3,8 @@
 
 // storage (according to save_data() contract method)
 
-storage#_ owner_address:MsgAddress counter:uint64 = Storage
+storage#_ owner_address:MsgAddress counter1:uint64 counter2:uint64 = Storage
 
 // ops
 
 increment query_id:uint64 = InternalMsgBody
-
-deposit query_id:uint64 = InternalMsgBody
-
-withdraw query_id:uint64 withdraw_amount:Grams = InternalMsgBody
-
-transfer_ownership query_id:uint64 new_owner_address:MsgAddress = InternalMsgBody
